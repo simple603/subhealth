@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Fitst</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<link rel="stylesheet" type="text/css" href="css/first.css"/>
+</head>
+<body>
+	<div class="index">
+		<div class="box">
+			<div class="fonts">
+				<div class="bg" id="bg"></div>
+				<div class="text"><span id="text">6</span>%</div>
+			</div>
+		</div>
+		<div class="sun"></div>
+		<div class="yun"></div>
+		<div class="yun2"></div>
+		<div id="yinle" class="yinle">
+			<audio controls id="yin" style="display: none;">
+				<source src="./media/music.mp3" type="">
+			</audio>
+		</div>
+		<div class="hudie"></div>
+
+		<!-- 字体 -->
+		<div class="font">
+			<div class="ball"></div>
+			<div class="list01"></div>
+			<div class="list02"></div>
+			<div class="font01">
+				<p>合理膳食、适量运动、戒烟限酒和心理平衡是健康生活方式的四大基石。</p>
+				<p>培养并坚持健康的生活习惯与行为方式，可以有效预防和控制慢性病。</p>
+			</div>
+			<div class="font02">
+				<p>Reasonable diet, moderate exercise, smoking cessation and alcohol restriction and psychological balance arethe four cornerstones</p>				<p>of healthy lifestyle. Cultivating and adhering to healthy living habits and behavior can effectively prevent and control chronic diseases.</p>
+			</div>
+		</div>
+		
+		<div class="tree"></div>
+		<div class="grass"></div>
+		<div class="land"></div>
+		<div class="grass_center"></div>
+		<div class="tree_left"></div>
+		<div class="grass_left"></div>
+		<div class="grass_right"></div>
+		<div class="prople"></div>
+		
+		<a class="button" href="#">
+			<img src="images/button.png" >
+		</a>
+	</div>
+
+</body>
+</html>
+<script type="text/javascript">
+	// 适配文字
+	var html = document.documentElement
+	var widths = html.clientWidth
+	var fs = widths / 10
+	if(fs > 75){
+		fs = 75
+	}
+	html.style.fontSize = fs + 'px'
+	
+	// 页面跳转
+	var num = 6
+	var bg = document.getElementById('bg')
+	var text = document.getElementById('text')
+	var time_num = function(e){
+		if(num<100){
+			bg.style.width = num + '%'
+			text.innerHTML = num
+			num+=2
+		}
+		else{
+			bg.style.width = num + '%'
+			text.innerHTML = num
+			window.location.href = 'first.html'
+			return false
+		}
+	}
+	if(num != "100"){
+	        setInterval(time_num,100);
+	    }
+</script>

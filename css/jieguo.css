@@ -1,0 +1,111 @@
+.jieguo_text {
+  width: 8.45333333rem;
+  height: 14.05333333rem;
+  background: #fff;
+  border: 5px dashed #009051;
+  border-radius: 0.66666667rem;
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 90;
+  text-align: center;
+}
+.jieguo_text .tittle {
+  color: #359dff;
+  font-size: 0.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+.jieguo_text .fenshu {
+  width: 7.2rem;
+  height: 2.69333333rem;
+  background: url(../images/jieguo_img02.png) no-repeat;
+  background-size: 7.2rem;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+}
+.jieguo_text .fenshu .xing {
+  width: 3.02666667rem;
+  height: 0.46666667rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 0rem auto;
+}
+.jieguo_text .fenshu .xing .list {
+  width: 0.45333333rem;
+  height: 0.46666667rem;
+  position: relative;
+  top: 0;
+  left: 0;
+  animation: xing 2s linear;
+  animation-play-state: paused;
+}
+.jieguo_text .fenshu .xing .list .liang {
+  width: 0.45333333rem;
+  height: 0.46666667rem;
+  position: absolute;
+  top: -0.58666667rem;
+  left: 0rem;
+  z-index: 99;
+  display: none;
+}
+.jieguo_text .fenshu .xing .list .an {
+  width: 0.45333333rem;
+  height: 0.46666667rem;
+  position: absolute;
+  top: -0.58666667rem;
+  left: 0rem;
+}
+.jieguo_text .fenshu .fen {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  color: #fff;
+  font-weight: bold;
+}
+.jieguo_text p.text {
+  font-size: 0.4rem;
+  text-align: left;
+  text-indent: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.jieguo_text .box {
+  width: 7.2rem;
+  height: 4.66666667rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 0.5rem;
+}
+.jieguo_text .box li {
+  width: 3.02666667rem;
+  height: 0.66666667rem;
+  line-height: 0.66666667rem;
+  text-align: center;
+  border-radius: 0.2rem;
+  font-size: 0.3rem;
+  color: red;
+  background-color: #eee;
+  margin-bottom: 0.26666667rem;
+}
+.jieguo_text p.text1 {
+  font-size: 0.25rem;
+  margin-top: 0.2rem;
+  color: #838383;
+}
+@keyframes xing {
+  0% {
+    left: -10rem;
+    top: -10rem;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 0rem;
+    left: 0rem;
+    transform: rotate(900deg);
+  }
+}
+rotate(900deg);
+  }
+}

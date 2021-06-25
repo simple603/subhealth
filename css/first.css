@@ -1,0 +1,251 @@
+.index {
+  position: relative;
+  height: 17.78666667rem;
+  background: url(../images/1.png);
+  background-size: 17.78666667rem auto;
+  overflow: hidden;
+  user-select: none;
+}
+.sun {
+  width: 2.2rem;
+  height: 1.98666667rem;
+  background: url(../images/sun.png) no-repeat;
+  background-size: 2.2rem auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  animation: sun linear 2s infinite;
+}
+.yun {
+  width: 10rem;
+  height: 9.54666667rem;
+  background: url(../images/yun_01.png) no-repeat;
+  background-size: 10rem auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.yun2 {
+  width: 5.22666667rem;
+  height: 3.14666667rem;
+  background: url(../images/yun_02.png) no-repeat;
+  background-size: 5.22666667rem;
+  position: absolute;
+  top: 38%;
+  right: 1rem;
+}
+.yinle {
+  width: 1rem;
+  height: 0.97333333rem;
+  background: url(../images/yinle.png) no-repeat;
+  background-size: 1rem auto;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  z-index: 10;
+  animation: yinle 4s linear infinite;
+  animation-play-state: running;
+  cursor: pointer;
+}
+.hudie {
+  width: 1.68rem;
+  height: 1.14666667rem;
+  background: url(../images/hudie.png) no-repeat;
+  background-size: 1.68rem auto;
+  position: absolute;
+  top: 43%;
+  left: 2rem;
+}
+/* 字体 */
+.font {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 3rem;
+  z-index: 10;
+}
+.font .ball {
+  width: 0.85333333rem;
+  height: 0.85333333rem;
+  background: url(../images/ball.png) no-repeat;
+  background-size: 0.85333333rem auto;
+  position: absolute;
+  right: 1rem;
+  top: -0.7rem;
+  animation: ball linear 10s infinite;
+}
+.font .list01 {
+  width: 7.92rem;
+  height: 1.48rem;
+  background: url(../images/font_01.png) no-repeat;
+  background-size: 7.92rem auto;
+  margin: 0 auto;
+}
+.font .list02 {
+  width: 7.38666667rem;
+  height: 0.89333333rem;
+  background: url(../images/font_02.png) no-repeat;
+  background-size: 7.38666667rem auto;
+  margin: 0 auto;
+  margin-bottom: 0.3rem;
+}
+.font .font01 {
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  font-size: 0.25rem;
+  margin-bottom: 0.2rem;
+}
+.font .font01 p {
+  text-align: center;
+}
+.font .font02 {
+  width: 85%;
+  margin: 0 auto;
+  font-size: 0.04rem;
+  font-weight: bold;
+  text-align: left;
+}
+.tree {
+  width: 2.73333333rem;
+  height: 8.02666667rem;
+  background: url(../images/shu_01.png) no-repeat;
+  background-size: 2.73333333rem auto;
+  position: absolute;
+  top: 42%;
+  transform: translateY(-50%);
+  right: 0;
+}
+.grass {
+  width: 7.4rem;
+  height: 4.57333333rem;
+  background: url(../images/img_btm04.png) no-repeat;
+  background-size: 7.4rem;
+  position: absolute;
+  top: 58.4%;
+  right: 0;
+  z-index: 10;
+}
+.land {
+  width: 10rem;
+  height: 3.58666667rem;
+  background: url(../images/btm.png) no-repeat;
+  background-size: 10rem auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+}
+.grass_center {
+  width: 3.28rem;
+  height: 2.93333333rem;
+  background: url(../images/img_btm02.png) no-repeat;
+  background-size: 3.28rem auto;
+  position: absolute;
+  top: 69%;
+  left: 0.6rem;
+}
+.tree_left {
+  width: 1.38666667rem;
+  height: 4.76rem;
+  background: url(../images/img_btm03.png) no-repeat;
+  background-size: 1.38666667rem auto;
+  position: absolute;
+  top: 64%;
+  left: 0;
+  z-index: 10;
+}
+.grass_left {
+  width: 4.16rem;
+  height: 2.50666667rem;
+  background: url(../images/img_btm.png) no-repeat;
+  background-size: 4.16rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+.grass_right {
+  width: 3rem;
+  height: 3.8rem;
+  background: url(../images/img_btm06.png) no-repeat;
+  background-size: 3rem auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 20;
+}
+.prople {
+  width: 5.16rem;
+  height: 8.4rem;
+  background: url(../images/people.png) no-repeat;
+  background-size: 5.16rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 35%;
+  z-index: 15;
+}
+.button {
+  width: 3.69333333rem;
+  height: 1.06666667rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 35%;
+  z-index: 20;
+  cursor: pointer;
+  animation: btn 2s linear infinite;
+}
+.button img {
+  width: 100%;
+}
+@keyframes sun {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes ball {
+  0% {
+    right: 1rem;
+    transform: rotate(0deg);
+  }
+  50% {
+    right: 8rem;
+    transform: rotate(-720deg);
+  }
+  100% {
+    right: 1rem;
+    transform: rotate(0deg);
+  }
+}
+@keyframes btn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes yinle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-75deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

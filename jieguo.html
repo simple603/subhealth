@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>测试结果</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="css/first.css"/>
+	<link rel="stylesheet" type="text/css" href="css/about.css"/>
+	<link rel="stylesheet" type="text/css" href="css/ceshi.css"/>
+	<link rel="stylesheet" type="text/css" href="css/jieguo.css"/>
+</head>
+<body>
+	<div class="index">
+			<!-- 音乐 -->
+			<audio controls id="yin" autoplay="autoplay" style="display: none;">
+				<source src="./media/music.mp3" type="">
+			</audio>
+			<!-- 返回 -->
+			<a href="ceshi.html" class="back"></a>
+			<div class="about" id="about">
+				<span class="anima">亚</span>
+				<span class="anima">健</span>
+				<span class="anima">康</span>
+				<span class="anima">测</span>
+				<span class="anima">试</span>
+				<span class="anima">结</span>
+				<span class="anima">果</span>
+			</div>
+			<div class="jieguo_text">
+				<div class="tittle">亚健康指数</div>
+				<div class="fenshu">
+					<div class="xing" id="xing">
+						<div class="list">
+							<div class="liang">
+								<img src="images/xingxing_01.png" >
+							</div>
+							<div class="an">
+								<img src="images/xingxing_02.png" >
+							</div>
+						</div>
+						<div class="list">
+							<div class="liang">
+								<img src="images/xingxing_01.png" >
+							</div>
+							<div class="an">
+								<img src="images/xingxing_02.png" >
+							</div>
+						</div>
+						<div class="list">
+							<div class="liang">
+								<img src="images/xingxing_01.png" >
+							</div>
+							<div class="an">
+								<img src="images/xingxing_02.png" >
+							</div>
+						</div>
+						<div class="list">
+							<div class="liang">
+								<img src="images/xingxing_01.png" >
+							</div>
+							<div class="an">
+								<img src="images/xingxing_02.png" >
+							</div>
+						</div>
+						<div class="list">
+							<div class="liang">
+								<img src="images/xingxing_01.png" >
+							</div>
+							<div class="an">
+								<img src="images/xingxing_02.png" >
+							</div>
+						</div>
+					</div>
+					<p class="fen" id="fen">3.2</p>
+				</div>
+				<p class="text">你选择的症状如下:</p>
+				<ul class="box" id='box'>
+
+				</ul>
+				<p class="text1">如何改善亚健康状态，您可以点击按钮了解更多知识</p>
+			</div>
+			<div class="sun"></div>
+			<div class="yun"></div>
+			<div class="yun2"></div>
+			<div class="hudie"></div>
+			<div class="tree"></div>
+			<div class="grass"></div>
+			<div class="land"></div>
+			<div class="grass_center"></div>
+			<div class="tree_left"></div>
+			<div class="grass_left"></div>
+			<div class="grass_right"></div>
+			
+			<a class="ceshi_btn" href="footer.html">
+				<img src="./images/jieguo_img01.png" >
+			</a>
+		</div>
+</body>
+</html>
+<script type="text/javascript">
+	// 适配文字
+	var html = document.documentElement
+	var widths = html.clientWidth
+	var fs = widths / 10
+	if(fs > 75){
+		fs = 75
+	}
+	html.style.fontSize = fs + 'px'
+	
+	// 文字波动
+	var about = document.getElementById('about')
+	var spans = about.children
+	var num = 0
+	setInterval(function(){
+		if(num == 7){
+			num = 0
+		}
+		spans[num].style.animationPlayState = 'running'
+		num++
+	},100)
+	
+	var xing = document.getElementById('xing')
+	var lists = xing.children
+	var num1 = 0
+	setInterval(function(){
+		if(num1 == 5){
+			num1 = 0
+		}
+		lists[num1].style.animationPlayState = 'running'
+		num1++
+	},200)
+	
+	
+	// 获取点击信息
+	var box = document.getElementById('box')
+	for(var i=0;i<localStorage.length;i++){
+		var li = document.createElement('li')
+		var key = localStorage.key(i)
+		li.innerHTML = localStorage.getItem(key)
+		box.appendChild(li)
+	}
+	// 设置分数
+	var fen = document.getElementById('fen')
+	fen.innerHTML = 0.5 * localStorage.length
+	// 设置星星
+	if(localStorage.length % 2 == 0){
+		var num2 = localStorage.length / 2
+		for(var q = 0;q<num2;q++){
+			// var add = 34 / 75
+			lists[q].children[0].style.display = 'block'
+		}
+	}
+	else if(localStorage.length % 2 == 1){
+		var num2 = localStorage.length / 2 - 0.5
+		for(var q = 0;q<num2;q++){
+			lists[q].children[0].style.display = 'block'
+		}
+		var add = 17 / 75
+		lists[num2].children[0].style.display = 'block'
+		lists[num2].children[0].style.width = add + "rem"
+	}
+	
+</script>

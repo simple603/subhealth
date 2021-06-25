@@ -1,0 +1,109 @@
+.back{
+	width: 44 / 75rem;
+	height: 44 / 75rem;
+	background: url(../images/fanhui.png) no-repeat;
+	background-size: 44 / 75rem auto;
+	position: absolute;
+	top: 3%;
+	left: .8rem;
+	z-index: 15;
+}
+.about{
+	width: 659 / 75rem;
+	height: 92 / 75rem;
+	line-height: 92 / 75rem;
+	text-align: center;
+	font-size: .4rem;
+	font-weight: bold;
+	color: #fff;
+	background: url(../images/about_img01.png) no-repeat;
+	background-size: 659 / 75rem auto;
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 20;
+	.anima{
+		display: inline-block;
+		animation: abo 1.2s ease infinite;
+		animation-play-state: paused;
+	}
+}
+.about_text{
+	width: 634 / 75rem;
+	height: 1054 / 75rem;
+	background: #fff;
+	border: 5px dashed #009051;
+	border-radius: 50 / 75rem;
+	position: absolute;
+	top: 18%;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 90;
+	.img{
+		width: 249 / 75rem;
+		height: 242 / 75rem;
+		margin: 0 auto;
+		margin-top: .9rem;
+		img{
+			width: 100%;
+		}
+	}
+	.list01{
+		width: 139 / 75rem;
+		height: 50 / 75rem;
+		line-height: 50 / 75rem;
+		background: #2b7a50;
+		border-radius: 14.48 / 75rem;
+		font-size: .3rem;
+		color: #fff;
+		text-align: center;
+		margin: .4rem .5rem .5rem;
+	}
+	p{
+		display: block;
+		margin: 0 auto;
+		width: 546 / 75rem;
+		font-size: .35rem;
+		color: #3c3c3c;
+		margin-bottom: .1rem;
+		font-weight: bold;
+		&:nth-child(3){
+			margin-bottom: 0;
+		}
+		&:last-child{
+			line-height: .6rem;
+		}
+	}
+}
+.about_btn{
+	width: 277 / 75rem;
+		height: 80 / 75rem;
+		position: absolute;
+		bottom: 1rem;
+		left: 30%;
+		z-index: 99;
+		cursor: pointer;
+		animation: btn 2s linear infinite;
+		img{
+			width: 100%;
+		}
+}
+
+@keyframes abo{
+	0%{
+		transform: translateY(-12 / 75rem);
+	}
+	30%{
+		transform: translateY(10 / 75rem);
+	}
+	100%{
+		transform: translateY(-12 / 75rem);
+	}
+}
+ransform: translateY(10 / 75rem);
+	}
+	100%{
+		transform: translateY(-12 / 75rem);
+	}
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>亚健康</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="css/first.css"/>
+	<link rel="stylesheet" type="text/css" href="css/about.css"/>
+</head>
+<body>
+	<div class="index">
+		<!-- 音乐 -->
+		<audio controls id="yin" autoplay="autoplay" style="display: none;">
+			<source src="./media/music.mp3" type="">
+		</audio>
+		<!-- 返回 -->
+		<a href="index.html" class="back"></a>
+		<div class="about" id="about">
+			<span class="anima">什</span>
+			<span class="anima">么</span>
+			<span class="anima">是</span>
+			<span class="anima">亚</span>
+			<span class="anima">健</span>
+			<span class="anima">康</span>
+			<span class="anima">?</span>
+		</div>
+		<div class="about_text">
+			<div class="img">
+				<img src="images/about_ing02.png" >
+			</div>
+			<div class="list01">临床表现</div>
+			<p>①以疲劳，或睡眠紊乱，或疼痛等症状；</p>
+			<p> ②以抑郁寡欢，或焦躁不安、急躁易怒，或恐惧胆怯，或短期记忆力下降、注意力不能集中等；</p>
+			<p>③以人际交往频率减低，或人际关系紧张等症状。</p>
+			<div class="list01">注意事项</div>
+			<p>上述3条中的任何一条持续发作3个月以上，可分别被判断为处于躯体亚健康、心理亚健康、社会交往亚健康状态。</p>
+		</div>
+		<div class="sun"></div>
+		<div class="yun"></div>
+		<div class="yun2"></div>
+		<div class="hudie"></div>
+		<div class="tree"></div>
+		<div class="grass"></div>
+		<div class="land"></div>
+		<div class="grass_center"></div>
+		<div class="tree_left"></div>
+		<div class="grass_left"></div>
+		<div class="grass_right"></div>
+		
+		<a class="about_btn" href="ceshi.html">
+			<img src="images/about_btn.png" >
+		</a>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+
+	// 适配文字
+	var html = document.documentElement
+	var widths = html.clientWidth
+	var fs = widths / 10
+	if(fs > 75){
+		fs = 75
+	}
+	html.style.fontSize = fs + 'px'
+	
+	// 文字波动
+	var about = document.getElementById('about')
+	var spans = about.children
+	var num = 0
+	setInterval(function(){
+		if(num == 7){
+			num = 0
+		}
+		spans[num].style.animationPlayState = 'running'
+		num++
+	},100)
+
+</script>

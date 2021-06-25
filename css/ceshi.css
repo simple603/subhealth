@@ -1,0 +1,83 @@
+.ceshi_text {
+  width: 8.45333333rem;
+  height: 14.05333333rem;
+  background: #fff;
+  border: 5px dashed #009051;
+  border-radius: 0.66666667rem;
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 90;
+}
+.ceshi_text p {
+  width: 7.22666667rem;
+  display: block;
+  margin: 0 auto;
+  font-size: 0.35rem;
+  color: #3c3c3c;
+}
+.ceshi_text p:first-child {
+  margin-top: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+.ceshi_text p:last-child {
+  color: #838383;
+  font-size: 0.3rem;
+  line-height: 0.7rem;
+}
+.ceshi_text .list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0rem 0.5rem;
+}
+.ceshi_text .list .box {
+  position: relative;
+  width: 3.06666667rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  background-color: #2b7a50;
+  border-radius: 0.19306667rem;
+  font-size: 0.3rem;
+  color: #fff;
+  text-align: center;
+  text-indent: 0.2rem;
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+}
+.ceshi_text .list .box .btn {
+  position: absolute;
+  top: 0.15rem;
+  left: 0.1rem;
+  width: 0.50666667rem;
+  height: 0.50666667rem;
+  line-height: 0.50666667rem;
+  background: #fff;
+  color: #2b7a50;
+  border-radius: 100%;
+  text-indent: 0;
+}
+.ceshi_text .list .box .gou {
+  width: 0.28rem;
+  height: 0.25333333rem;
+  background: url(../images/gou_img01.png) no-repeat;
+  background-size: 0.28rem;
+  position: absolute;
+  bottom: 0.1rem;
+  right: 0.1rem;
+  display: none;
+}
+.ceshi_btn {
+  width: 3.69333333rem;
+  height: 1.06666667rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 30%;
+  z-index: 99;
+  cursor: pointer;
+  animation: btn 2s linear infinite;
+}
+.ceshi_btn img {
+  width: 100%;
+}

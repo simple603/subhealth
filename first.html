@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>亚健康指数</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="css/first.css"/>
+</head>
+<body>
+	<div class="index">
+		<div class="sun"></div>
+		<div class="yun"></div>
+		<div class="yun2"></div>
+		<div id="yinle" class="yinle">
+			<audio controls autoplay="autoplay" id="yin" style="display: none;">
+				<source src="./media/music.mp3" type="">
+			</audio>
+		</div>
+		<div class="hudie"></div>
+
+		<!-- 字体 -->
+		<div class="font">
+			<div class="ball"></div>
+			<div class="list01"></div>
+			<div class="list02"></div>
+			<div class="font01">
+				<p>合理膳食、适量运动、戒烟限酒和心理平衡是健康生活方式的四大基石。</p>
+				<p>培养并坚持健康的生活习惯与行为方式，可以有效预防和控制慢性病。</p>
+			</div>
+			<div class="font02">
+				<p>Reasonable diet, moderate exercise, smoking cessation and alcohol restriction and psychological balance arethe four cornerstones</p>				<p>of healthy lifestyle. Cultivating and adhering to healthy living habits and behavior can effectively prevent and control chronic diseases.</p>
+			</div>
+		</div>
+		
+		<div class="tree"></div>
+		<div class="grass"></div>
+		<div class="land"></div>
+		<div class="grass_center"></div>
+		<div class="tree_left"></div>
+		<div class="grass_left"></div>
+		<div class="grass_right"></div>
+		<div class="prople"></div>
+		
+		<a href="about.html" class="button" href="#">
+			<img src="images/button.png" >
+		</a>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	// 适配文字
+	var html = document.documentElement
+	var widths = html.clientWidth
+	var fs = widths / 10
+	if(fs > 75){
+		fs = 75
+	}
+	html.style.fontSize = fs + 'px'
+	// 音乐
+	var yinle = document.getElementById("yinle")
+	var yin = document.getElementById("yin")
+	var flag = true
+	yinle.onclick = function(){
+		if(flag){
+			yin.pause()
+			yinle.style.animationPlayState = 'paused'
+			flag = false
+		}
+		else{
+			yin.play()
+			yinle.style.animationPlayState = 'running'
+			flag = true
+		}
+		
+	}
+	
+	
+	// var soundBgm=document.getElementById("yin");
+	//             //判断本地是否有存储过音频播放时间
+	//             if(sessionStorage.bgmTime==null){
+	//                 //若没有时，从头自动播放
+	//                 soundBgm.currentTime=0;
+	//             }else{
+	//                 //若有存储的则，取出本地存储的音频播放的暂停时间
+	//                 var curTime=window.sessionStorage.getItem("bgmTime");
+	//                 sessionStorage.bgmPlay=soundBgm.bgmPlay;
+	//                 //从暂停时间开始接着播放
+	//                 soundBgm.currentTime+=curTime;
+	//             }
+	//             //页面跳转时将本页面音频最后截至时间存储下来
+	//             function fun(){
+	//                 soundBgm.pause();
+	//                 sessionStorage.bgmPlay=soundBgm.bgmPlay;
+	//                 sessionStorage.bgmTime=soundBgm.bgmPlay?soundBgm.currentTime+soundBgm.context.currentTime-soundBgm.startTime:soundBgm.currentTime;
+	//                 location.href='about.html';
+	//             }
+</script>
